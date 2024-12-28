@@ -12,6 +12,13 @@
           <p>Latest Collection, Best Brands</p>
         </div>
       </div>
+      <div class="more-images">
+        @for ($i=1; $i <= 6; $i++)
+          <div class="card border">
+            <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="More Images">
+          </div>
+        @endfor
+      </div>
     </div>
     <!-- Right Column: Offers or Categories -->
     <div class="col-md-7 col-sm-12 mb-4">
@@ -51,6 +58,11 @@
                 <input type="radio" id="star1" name="rate" value="1" />
                 <label for="star1" title="text">1 star</label>
             </div>
+        </div>
+        
+        <div style="margin-top: 75px;">
+            <button type="button" class="btn btn-primary mybutton">Buy Now</button>
+            <button type="button" class="btn btn-primary mybutton">Add to Cart</button>
         </div>
     </div>
   </div>
