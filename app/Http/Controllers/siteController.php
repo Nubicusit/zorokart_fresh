@@ -16,7 +16,7 @@ class siteController extends Controller
     }
 
     public function signup(){
-        return view('signup');
+        return view('signup.signup');
     }
 
 
