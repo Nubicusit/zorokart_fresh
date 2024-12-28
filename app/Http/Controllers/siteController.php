@@ -10,4 +10,9 @@ class siteController extends Controller
     public function index(){
         return view('index');
     }
+
+    //Calling all products
+    public function products(){
+        return view('products');
+    }
 }
