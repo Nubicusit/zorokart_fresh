@@ -4,20 +4,22 @@
 <div class="container my-4 fashion-container">
   <div class="row">
     <!-- Left Column: Main Banner -->
-    <div class="col-md-5 col-sm-12">
+    <div class="col">
+      <div class="more-images">
+        @for ($i=1; $i <= 6; $i++)
+          <div class="card border">
+            <img class="card-img-top img-fluid more-images-each" src="https://via.placeholder.com/100" alt="More Images">
+          </div>
+        @endfor
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
       <div class="fashionadd-banner">
         <img class="fashionadd-banner-img img-fluid" src="https://via.placeholder.com/400x500" alt="Fashion">
         <div class="fashionadd-banner-text">
           <h2>Fashion Items</h2>
           <p>Latest Collection, Best Brands</p>
         </div>
-      </div>
-      <div class="more-images">
-        @for ($i=1; $i <= 6; $i++)
-          <div class="card border">
-            <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="More Images">
-          </div>
-        @endfor
       </div>
     </div>
     <!-- Right Column: Offers or Categories -->
@@ -31,17 +33,17 @@
                     <!-- Row 1 -->
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                        <!-- <img src="https://via.placeholder.com/150" alt="Offer 1" class="img-fluid"> -->
+                          <strong>No Cost EMI </strong><br/>Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI
                         </div>
                     </div>
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                        <!-- <img src="https://via.placeholder.com/150" alt="Offer 2" class="img-fluid"> -->
+                          <strong>No Cost EMI </strong><br/>Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI
                         </div>
                     </div>
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                        <!-- <img src="https://via.placeholder.com/150" alt="Offer 3" class="img-fluid"> -->
+                          <strong>No Cost EMI </strong><br/>Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI
                         </div>
                     </div>
                 </div>

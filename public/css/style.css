@@ -785,9 +785,12 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  border-style: inset;
+  /* border-style: inset; */
   height: 100px;
   border-width: thin;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   }
 
   .offer-item:hover {
@@ -801,8 +804,24 @@ footer {
 
   .more-images{
     display: flex;
-    height: 50px;
-    margin-top: 10px;
+    flex-direction: column;  /* Arrange items vertically (column-wise) */
+    gap: 15px;               /* Optional: Adds space between each card */
+    align-items: center;     /* Center the items horizontally */
+  }
+
+  .more-images .card {
+    width: 100%;             /* Makes each card take the full width of the container */
+    max-width: 200px;        /* Optional: Limits the width of each card */
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .more-images-each{
+    height: 58px !important;
+    object-fit: cover;
   }
 @media (max-width: 768px) {
     .header {
