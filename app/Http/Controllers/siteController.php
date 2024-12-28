@@ -10,4 +10,17 @@ class siteController extends Controller
     public function index(){
         return view('index');
     }
+
+    public function login(){
+        return view('login.login');
+    }
+
+    public function signup(){
+        return view('signup');
+    }
+
+
+   
+
+
 }
