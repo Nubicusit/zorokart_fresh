@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-light navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{asset('img/logo-01.svg')}}" alt="" width="120" height="50" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@
                             all
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <li><button class="dropdown-item" type="button">Category 1</button></li>
+                            <li><button class="dropdown-item" type="button"  onclick="window.location='{{ route('products') }}';">Category 2</button></li>
                             <li><button class="dropdown-item" type="button">Category 2</button></li>
                         </ul>
                     </div>

@@ -15,7 +15,7 @@
         <div class="card border rounded-3">
           <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">Product Name</h5>
+            <h5 class="card-title"><a href="http://127.0.0.1:8000/products/s" style="color: black;">Product Name</a></h5>
             <div class="d-flex justify-content-between">
               <!-- Buy Now Button with Icon -->
               <button class="btn">

@@ -17,7 +17,7 @@ class siteController extends Controller
     }
 
     //Show Product details
-    public function productDetails($id){
+    public function productDetails(){
         return view('products.viewProduct');
     }
 }
