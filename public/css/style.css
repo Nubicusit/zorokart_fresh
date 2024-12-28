@@ -794,6 +794,16 @@ footer {
   transform: scale(1.05); /* Adds a zoom effect on hover */
   }
 
+  .mybutton{
+    margin-right: 20px;
+    border-radius: 25px;
+  }
+
+  .more-images{
+    display: flex;
+    height: 50px;
+    margin-top: 10px;
+  }
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
