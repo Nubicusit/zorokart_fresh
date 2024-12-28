@@ -10,4 +10,9 @@ class siteController extends Controller
     public function index(){
         return view('index');
     }
+
+    //Show Product details
+    public function productDetails($id){
+        return view('products.viewProduct');
+    }
 }
