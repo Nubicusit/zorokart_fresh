@@ -1,7 +1,7 @@
 @extends('../login.header_footer')
 
 @section('content')
-    <div class="container mt-5">
+<div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card mb-4" style="padding: 30px; background: rgb(255,196,101); background: linear-gradient(355deg, rgba(255,196,101,1) 6%, rgba(252,234,205,1) 90%); border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">

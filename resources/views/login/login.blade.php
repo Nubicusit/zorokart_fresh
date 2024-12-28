@@ -28,7 +28,7 @@
 
                         <div class="text-center mt-3">
                             <a href="#" class="link text-decoration-none text-primary d-block">Forgot Password?</a>
-                            <a href="#" class="link text-decoration-none text-primary d-block">Create New Account</a>
+                            <a href="{{ url('/signup') }}" class="link text-decoration-none text-primary d-block">Create New Account</a>
                         </div>
                     </div>
                 </div>
