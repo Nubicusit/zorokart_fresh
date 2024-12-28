@@ -6,6 +6,3 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\siteController;
 
 Route::get('/', [siteController::class, 'index']);
-
-//Products page
-Route::get('/products', [siteController::class, 'products']);
