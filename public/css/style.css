@@ -788,9 +788,16 @@ footer {
   /* border-style: inset; */
   height: 100px;
   border-width: thin;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  padding: 10px;
+  }
+  .offer-desc{
+    font-size: small;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
   }
 
   .offer-item:hover {
@@ -817,7 +824,7 @@ footer {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 100%;
+    width: 20%;
   }
   
   .mybutton:hover {
@@ -841,6 +848,17 @@ footer {
   
   .mybutton:disabled:hover {
     box-shadow: none;
+  }
+
+  .button-row {
+    display: flex;  /* This will arrange the buttons in a row */
+    gap: 10px;      /* Optional: Adds space between the buttons */
+    margin-top: 85px;
+}
+
+  .price{
+    font-weight: 600;
+    font-size: x-large;
   }
 
   .more-images{

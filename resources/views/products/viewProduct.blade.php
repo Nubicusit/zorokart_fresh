@@ -26,24 +26,27 @@
     <div class="col-md-7 col-sm-12 mb-4">
         <div class="sidebar">
             <h3>Product Name</h3>
-            <p>Price</p>
+            <p class="price">₹ 2170</p>
             <div>
-                <h5>Offers available</h5>
+                <p>Offers available</p>
                 <div class="row justify-content-center">
                     <!-- Row 1 -->
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                          <strong>No Cost EMI </strong><br/>Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI
+                          <b>No Cost EMI </b>
+                          <p class="offer-desc">Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI</p>
                         </div>
                     </div>
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                          <strong>No Cost EMI </strong><br/>Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI
+                          <b>No Cost EMI </b>
+                          <p class="offer-desc">Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI</p>
                         </div>
                     </div>
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                          <strong>No Cost EMI </strong><br/>Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI
+                          <b>No Cost EMI </b>
+                          <p class="offer-desc">Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI</p>
                         </div>
                     </div>
                 </div>
@@ -62,9 +65,9 @@
             </div>
         </div>
         
-        <div style="margin-top: 75px;">
-            <button type="button" class="btn btn-primary mybutton">Buy Now</button>
-            <button type="button" class="btn btn-primary mybutton">Add to Cart</button>
+        <div class="button-row">
+            <button type="button" class="btn btn-primary row mybutton">Buy Now</button>
+            <button type="button" class="btn btn-primary row mybutton">Add to Cart</button>
         </div>
     </div>
   </div>
