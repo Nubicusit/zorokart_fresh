@@ -1,7 +1,7 @@
 @extends('includes.inc')
 @section('content')
 <!-- Category items section starts -->
-<div class="container-fluid my-4 px-0">
+<div class="container-fluid my-2 px-0">
   <button id="scroll-left" class="scroll-btn">⬅</button>
   <div class="scroll-container" id="scroll-container">
     <div class="category-item"><img src="https://via.placeholder.com/80" alt="Women's"><p>Women's</p></div>
@@ -21,7 +21,7 @@
 <!-- Category items section ends -->
 
 <!-- Main carousel section starts -->
-<div class="container-fluid px-0 my-4">
+<div class="container-fluid px-0 my-1">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
