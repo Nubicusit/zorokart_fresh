@@ -10,4 +10,5 @@ Route::get('/products', [siteController::class, 'products'])->name('products');
 Route::get('/products/{id}', [siteController::class, 'productDetails']);
 Route::get('/login', [siteController::class, 'login']);
 Route::get('/signup', [siteController::class, 'signup']);
+Route::get('/admin', [siteController::class, 'admin']);
 
