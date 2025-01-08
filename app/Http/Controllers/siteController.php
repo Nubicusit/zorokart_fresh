@@ -23,5 +23,12 @@ class siteController extends Controller
         return view('admin.adminDashboard');
     }
 
+    public function category(){
+        return view('admin.category');
+    }
+
+    public function subcategory(){
+        return view('admin.subcategory');
+    }
 
 }
