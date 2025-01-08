@@ -55,7 +55,7 @@
         }
 
         .nav-link {
-            color: #666;
+            color: #002162;
             padding: 0.75rem 1rem;
             margin: 0.2rem 0;
             border-radius: 0.5rem;
@@ -67,12 +67,12 @@
         
         .nav-link:hover {
             background: #f8f9fa;
-            color: #0d6efd;
+            color:#002162;
         }
         
         .nav-link.active {
             background: #e7f1ff;
-            color: #0d6efd;
+            color: #002162;
         }
 
         .submenu {
