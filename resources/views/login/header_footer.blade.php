@@ -19,7 +19,7 @@
     }
     
     .navbar-nav .nav-link.active {
-        order: 1; /* Moves 'Deliver to India' to the start */
+        order: 1; 
     }
 }
 

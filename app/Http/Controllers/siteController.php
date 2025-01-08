@@ -19,8 +19,9 @@ class siteController extends Controller
         return view('signup.signup');
     }
 
-
-   
+    public function admin(){
+        return view('admin.adminDashboard');
+    }
 
 
 }
