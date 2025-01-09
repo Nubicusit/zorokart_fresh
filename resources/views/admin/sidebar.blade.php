@@ -1,6 +1,6 @@
 <div class="sidebar">
     <div class="logo mb-4">
-        <a href="#">
+        <a href="/">
             <img src="{{ asset('zorologo.svg') }}" alt="Zorokart Admin Logo" class="img-fluid" />
         </a>
     </div>

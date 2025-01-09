@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital@0;1&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,500;1,500&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
+  font-family: "Exo 2", serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Exo 2", serif;
 }
 
 .navbar{
@@ -732,6 +733,155 @@ footer {
     color: #7c4dff;
 }
 
+/* Style for the rating stars */
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+/* Style for the rating stars ends*/
+
+.offer-item{
+  width: 168px;
+  height: 300px;
+  margin-right: 15px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  /* border-style: inset; */
+  height: 100px;
+  border-width: thin;
+  padding: 10px;
+  }
+  .offer-desc{
+    font-size: small;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+  }
+
+  .offer-item:hover {
+  transform: scale(1.05); /* Adds a zoom effect on hover */
+  }
+
+  .mybutton {
+    background-color: #36A9AE;
+    background-image: linear-gradient(#37ADB2, #329CA0);
+    border: 1px solid #2A8387;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 11px 15px 12px;
+    text-align: center;
+    transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 20%;
+  }
+  
+  .mybutton:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+    text-decoration: none;
+    transition-duration: .15s, .15s;
+  }
+  
+  .mybutton:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  }
+  
+  .mybutton:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+  }
+  
+  .mybutton:disabled:active {
+    pointer-events: none;
+  }
+  
+  .mybutton:disabled:hover {
+    box-shadow: none;
+  }
+
+  .button-row {
+    display: flex;  /* This will arrange the buttons in a row */
+    gap: 10px;      /* Optional: Adds space between the buttons */
+    margin-top: 85px;
+}
+
+  .price{
+    font-weight: 600;
+    font-size: x-large;
+  }
+
+  .more-images{
+    display: flex;
+    flex-direction: column;  /* Arrange items vertically (column-wise) */
+    gap: 15px;               /* Optional: Adds space between each card */
+    align-items: center;     /* Center the items horizontally */
+  }
+
+  .more-images .card {
+    width: 100%;             /* Makes each card take the full width of the container */
+    max-width: 200px;        /* Optional: Limits the width of each card */
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .more-images-each{
+    height: 58px !important;
+    object-fit: cover;
+  }
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -830,5 +980,3 @@ footer {
 @media (min-width: 1200px) and (max-width: 1599px) {
   
 }
-
-

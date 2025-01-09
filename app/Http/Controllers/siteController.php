@@ -11,6 +11,16 @@ class siteController extends Controller
         return view('index');
     }
 
+    //Calling all products
+    public function products(){
+        return view('products');
+    }
+
+    //Show Product details
+    public function productDetails(){
+        return view('products.viewProduct');
+    }
+
     public function login(){
         return view('login.login');
     }
