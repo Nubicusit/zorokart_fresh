@@ -106,10 +106,7 @@
             transition: transform 0.2s ease;
         }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
+       
         .stat-icon {
             width: 48px;
             height: 48px;
@@ -242,12 +239,9 @@
             }
         }
 
-        breadcrumb {
-        background-color: #fff;
+    .breadcrumb {
         padding: 1rem;
-        border-radius: 0.75rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+        
     }
 
     .breadcrumb-item a {

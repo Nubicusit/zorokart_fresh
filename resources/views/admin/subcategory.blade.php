@@ -36,7 +36,7 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th scope="col" width="5%">Sl No</th>
+                                <th scope="col" width="10%">Sl No</th>
                                 <th scope="col" width="20%">Sub Category</th>
                                 <th scope="col" width="20%">Category</th>
                                 <th scope="col" width="35%">Description</th>
