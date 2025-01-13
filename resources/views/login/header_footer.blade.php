@@ -63,8 +63,8 @@
                             <i class="fa-solid fa-circle-user fa-xl" style="color: #ffffff;"></i>&nbsp;Login
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownLog">
-                            <li><button class="dropdown-item" type="button">Login</button></li>
-                            <li><button class="dropdown-item" type="button">Register</button></li>
+                            <li><a href="{{ url('/login') }}"><button class="dropdown-item" type="button">Login</button></a></li>
+                            <li><a href="{{ url('/signup') }}"><button class="dropdown-item" type="button">Register</button></a></li>
                         </ul>
                     </div>
                     <a class="nav-link  text-white" aria-current="page" href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i>&nbsp;Cart</a>

@@ -11,29 +11,30 @@
                             <h3 class="font-weight-bold text-dark">Create an Account</h3>
                         </div>
 
-                        <form>
+                        <form method="post" action="signup">
+                            @csrf
                             <div class="mb-3">
-                                <label for="fullName" class="form-label font-weight-bold text-dark">Full Name</label>
-                                <input type="text" class="form-control" id="fullName" required style="border-radius: 10px;">
+                                <label for="name" class="form-label font-weight-bold text-dark">Full Name</label>
+                                <input type="text" name="name" class="form-control" id="name" required style="border-radius: 10px;">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label font-weight-bold text-dark">Email Address</label>
-                                <input type="email" class="form-control" id="email" required style="border-radius: 10px;">
+                                <input type="email" name="email" class="form-control" id="email" required style="border-radius: 10px;">
                             </div>
                             <div class="mb-3">
                                 <label for="phone" class="form-label font-weight-bold text-dark">Mobile Phone Number</label>
-                                <input type="text" class="form-control" id="phone" required style="border-radius: 10px;">
+                                <input type="text" name="phone" class="form-control" id="phone" required style="border-radius: 10px;">
                             </div>
                             <div class="mb-3 position-relative">
                                 <label for="password" class="form-label font-weight-bold text-dark">Password</label>
-                                <input type="password" class="form-control" id="password" required style="border-radius: 10px;">
+                                <input type="password" name="password" class="form-control" id="password" required style="border-radius: 10px;">
                                 <span class="position-absolute" style="top: 70%; right: 15px; transform: translateY(-50%); cursor: pointer;" id="togglePassword">
                                     <i class="fas fa-eye" id="eyeIcon" style="color: #6c757d;"></i>
                                 </span>
                             </div>
                             <div class="mb-3 position-relative">
                                 <label for="confirmPassword" class="form-label font-weight-bold text-dark">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirmPassword" required style="border-radius: 10px;">
+                                <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" required style="border-radius: 10px;">
                                 <span class="position-absolute" style="top: 70%; right: 15px; transform: translateY(-50%); cursor: pointer;" id="toggleConfirmPassword">
                                     <i class="fas fa-eye" id="confirmEyeIcon" style="color: #6c757d;"></i>
                                 </span>

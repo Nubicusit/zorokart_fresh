@@ -11,7 +11,7 @@
                             <h3 class="font-weight-bold text-dark">Sign In</h3>
                         </div>
 
-                        <form>
+                        <form method="post" action="login">
                             <div class="mb-3">
                                 <label for="emailOrPhone" class="form-label font-weight-bold text-dark">Email or Mobile Phone Number</label>
                                 <input type="text" class="form-control" id="emailOrPhone" required style="border-radius: 10px;">
