@@ -50,17 +50,27 @@
 <!-- Main carousel section ends -->
 
 <!-- Offers and discounts heading starts -->
+<<<<<<< HEAD
 <div class="container-fluid my-4">
 <h3>
   Avail Best Offers & Discounts
   <br>
   <small class="text-body-secondary"><a href="#">All Offers</a></small>
 </h3>
+=======
+<div class="container-fluid my-4 px-2">
+  <span style="font-size: larger;font-weight: 600;">Avail Best Offers & Discounts</span>
+  <span><a href="#" style="font-size: 15px !important;float:right;"><u>All Offers</u></a></span>
+>>>>>>> 5b5f044190be094160201c14dd298b73e23653a0
 </div>
 <!-- Offers and discounts heading ends -->
 
 <!-- Offers and discounts section starts -->
+<<<<<<< HEAD
 <div class="container-fluid my-2">
+=======
+<div class="container-fluid my-2" style="padding: 1.5rem !important;">
+>>>>>>> 5b5f044190be094160201c14dd298b73e23653a0
   <div class="row">
     <!-- @for ($i=1; $i <= 6; $i++)
       <div class="col-6 col-sm-4 col-md-2 mb-4">
@@ -70,11 +80,90 @@
       </div>
     @endfor -->
     <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/offers/1.jpg')}}" alt="Card image cap">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="{{asset('img/offers/1.jpg')}}" alt="Offer Products">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Diary Products</li>
+          </ul>
+          <p class="card-title">Buy 1 Get Another with 50%  Off</p></div>
+        <div class="card-body">
+          <!-- <a href="#" class="card-link">Card link</a> -->
+          <a href="#" class="card-link">View More</a>
+        </div>
       </div>
     </div>
     <div class="col-6 col-sm-4 col-md-2 mb-4">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="{{asset('img/offers/2.jpg')}}" alt="Offer Products">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Beauty and Personel care</li>
+          </ul>
+          <p class="card-title">Buy 1 Get Another with 50%  Off</p></div>
+        <div class="card-body">
+          <!-- <a href="#" class="card-link">Card link</a> -->
+          <a href="#" class="card-link">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 mb-4">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="{{asset('img/offers/3.jpg')}}" alt="Offer Products">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Watches</li>
+          </ul>
+          <p class="card-title">Buy 1 Get Another with 50%  Off</p></div>
+        <div class="card-body">
+          <!-- <a href="#" class="card-link">Card link</a> -->
+          <a href="#" class="card-link">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 mb-4">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="{{asset('img/offers/4.jpg')}}" alt="Offer Products">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Mobile Accessories</li>
+          </ul>
+          <p class="card-title">Buy 1 Get Another with 50%  Off</p></div>
+        <div class="card-body">
+          <!-- <a href="#" class="card-link">Card link</a> -->
+          <a href="#" class="card-link">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 mb-4">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="{{asset('img/offers/5.jpg')}}" alt="Offer Products">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Foot wears</li>
+          </ul>
+          <p class="card-title">Buy 1 Get Another with 50%  Off</p></div>
+        <div class="card-body">
+          <!-- <a href="#" class="card-link">Card link</a> -->
+          <a href="#" class="card-link">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-2 mb-4">
+      <div class="card">
+        <img class="card-img-top img-fluid" src="{{asset('img/offers/6.jpg')}}" alt="Offer Products">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Bags</li>
+          </ul>
+          <p class="card-title">Buy 1 Get Another with 50%  Off</p></div>
+        <div class="card-body">
+          <!-- <a href="#" class="card-link">Card link</a> -->
+          <a href="#" class="card-link">View More</a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-6 col-sm-4 col-md-2 mb-4">
       <div class="card border">
         <img class="card-img-top img-fluid" src="{{asset('img/offers/2.jpg')}}" alt="Card image cap">
       </div>
@@ -98,7 +187,7 @@
       <div class="card border">
         <img class="card-img-top img-fluid" src="{{asset('img/offers/6.jpg')}}" alt="Card image cap">
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -153,7 +242,11 @@
   </div>
 </div>
 <!-- Top Deals section starts -->
+<<<<<<< HEAD
 <div class="container-fluid my-4">
+=======
+<div class="container-fluid my-2">
+>>>>>>> 5b5f044190be094160201c14dd298b73e23653a0
 <h3>
   Top Deals
   <br>
