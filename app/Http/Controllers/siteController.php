@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class siteController extends Controller
 {
     //Calling index files UI
@@ -20,4 +22,39 @@ class siteController extends Controller
     public function productDetails(){
         return view('products.viewProduct');
     }
+
+    public function login(){
+        return view('login.login');
+    }
+
+    public function signup(){
+        return view('signup.signup');
+    }
+
+    public function postSignup(Request $req){
+        $user = new User;
+        $user->name = $req->input('name');
+        $user->email = $req->input('email');
+        $user->phone = $req->input('phone');
+        $user->password = Crypt::encrypt($req->input('password'));
+        $user->save();$req->session()->put('user',$req->input('name'));
+        return redirect('/login');
+    }
+
+    public function postLogin(Request $req){
+        return $req->input();
+    }
+
+    public function admin(){
+        return view('admin.adminDashboard');
+    }
+
+    public function category(){
+        return view('admin.category');
+    }
+
+    public function subcategory(){
+        return view('admin.subcategory');
+    }
+
 }
