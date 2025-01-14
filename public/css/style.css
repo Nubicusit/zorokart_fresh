@@ -254,11 +254,49 @@ font-size: 0.8rem;
 
 .card{
   width: 110%;
+  height: 260px;
 }
 
 .card img {
-  height: 200px;
-  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.list-group-item{
+  position: relative;
+  display: block;
+  background-color: #fff;
+  font-size: small;
+  padding: 1px;
+  font-weight: 600;
+}
+
+.card-title{
+  font-size: small;
+  /* font-weight: 600; */
+  margin-bottom: 1px;
+}
+
+.card-body{
+  text-align: center;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0px 6px 0px 6px;
+  height: 0px;
+}
+
+.card-link {
+  border: 1px solid #80808066;
+  border-radius: 10px;
+  padding: 3px 37px 3px 37px;
+  /* color: black; */
+}
+
+.card-link:hover{
+  text-decoration: none;
+  color: #FF5B01;
 }
 
 .custom-border {
@@ -627,8 +665,8 @@ main {
 a:link,
 a:visited {
     text-decoration: none;
-    color: var(--__N4QdChsbGN6j, #007185);
-    font-size: 14px !important;
+    color: var(--__N4QdChsbGN6j, #030303);
+    font-size: 14px;
     line-height: 20px !important;
 }
 
