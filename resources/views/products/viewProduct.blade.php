@@ -1,5 +1,6 @@
 @extends('includes.inc')
 @section('content')
+
 <!-- Product view starts -->
 <div class="container my-4 fashion-container">
   <div class="row">

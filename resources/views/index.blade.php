@@ -50,7 +50,7 @@
 <!-- Main carousel section ends -->
 
 <!-- Offers and discounts heading starts -->
-<div class="container my-4">
+<div class="container-fluid my-4">
 <h3>
   Avail Best Offers & Discounts
   <br>
@@ -60,7 +60,7 @@
 <!-- Offers and discounts heading ends -->
 
 <!-- Offers and discounts section starts -->
-<div class="container my-2">
+<div class="container-fluid my-2">
   <div class="row">
     <!-- @for ($i=1; $i <= 6; $i++)
       <div class="col-6 col-sm-4 col-md-2 mb-4">
@@ -106,7 +106,7 @@
 
 <!-- top fashion deals starts -->
 <!-- top fashion deals starts -->
-<div class="container my-4 fashion-container">
+<div class="container-fluid my-4 fashion-container">
   <div class="row">
     <!-- Left Column: Offers or Categories -->
     <div class="col-md-4 col-sm-12 mb-4">
@@ -153,14 +153,14 @@
   </div>
 </div>
 <!-- Top Deals section starts -->
-<div class="container my-4">
+<div class="container-fluid my-4">
 <h3>
   Top Deals
   <br>
   <!-- <small class="text-body-secondary"><a href="#">All Offers</a></small> -->
 </h3>
 </div>
-<div class="container my-2">
+<div class="container-fluid my-2">
   <div class="row">
     <!-- @for ($i=1; $i <= 6; $i++)
       <div class="col-6 col-sm-4 col-md-2 mb-4">
@@ -203,7 +203,7 @@
 </div>
 <!-- Top Deals section ends -->
  <!--Add -->
- <div class="container py-5">
+ <div class="container-fluid py-5">
         <div class="row">
             <!-- First Image -->
             <div class="col-md-6 col-sm-12 image-container">
@@ -216,14 +216,14 @@
         </div>
     </div>
 <!-- Pic your styles section starts -->
-<div class="container my-4">
+<div class="container-fluid my-4">
 <h3>
   Pic Your Styles
   <br>
   <!-- <small class="text-body-secondary"><a href="#">All Offers</a></small> -->
 </h3>
 </div>
-<div class="container my-2">
+<div class="container-fluid my-2">
   <div class="row">
     <!-- @for ($i=1; $i <= 6; $i++)
       <div class="col-6 col-sm-4 col-md-2 mb-4">
@@ -266,7 +266,7 @@
 </div>
 <!-- Pic your styles section ends -->
 <!-- Top Deals on TV & Appliances starts -->
-<div class="container my-4 fashion-container">
+<div class="container-fluid my-4 fashion-container">
   <div class="row">
     <!-- Left Column: Offers or Categories -->
     <div class="col-md-4 col-sm-12 mb-4">
