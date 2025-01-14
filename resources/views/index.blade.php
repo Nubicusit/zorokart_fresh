@@ -50,27 +50,23 @@
 <!-- Main carousel section ends -->
 
 <!-- Offers and discounts heading starts -->
-<<<<<<< HEAD
 <div class="container-fluid my-4">
 <h3>
   Avail Best Offers & Discounts
   <br>
   <small class="text-body-secondary"><a href="#">All Offers</a></small>
 </h3>
-=======
 <div class="container-fluid my-4 px-2">
   <span style="font-size: larger;font-weight: 600;">Avail Best Offers & Discounts</span>
   <span><a href="#" style="font-size: 15px !important;float:right;"><u>All Offers</u></a></span>
->>>>>>> 5b5f044190be094160201c14dd298b73e23653a0
 </div>
 <!-- Offers and discounts heading ends -->
 
 <!-- Offers and discounts section starts -->
-<<<<<<< HEAD
 <div class="container-fluid my-2">
-=======
+
 <div class="container-fluid my-2" style="padding: 1.5rem !important;">
->>>>>>> 5b5f044190be094160201c14dd298b73e23653a0
+
   <div class="row">
     <!-- @for ($i=1; $i <= 6; $i++)
       <div class="col-6 col-sm-4 col-md-2 mb-4">
@@ -242,11 +238,10 @@
   </div>
 </div>
 <!-- Top Deals section starts -->
-<<<<<<< HEAD
 <div class="container-fluid my-4">
-=======
+
 <div class="container-fluid my-2">
->>>>>>> 5b5f044190be094160201c14dd298b73e23653a0
+
 <h3>
   Top Deals
   <br>
