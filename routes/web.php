@@ -2,9 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Calling Site controller for UI
-use App\Http\Controllers\siteController;
+use Laravel\Socialite\Facades\Socialite;
 
+use App\Http\Controllers\siteController;
+use App\Http\Controllers\GoogleController;
+
+
+//Calling GoogleController for Google Auth
+Route::get('/auth/redirect',[GoogleController::class,'redirectToGoogle']);
+Route::get('/auth/callback',[GoogleController::class,'handleGoogleCallback']);
+// Route::get('/auth/redirect', function () {
+//     return Socialite::driver('google')->redirect();
+// });
+// Route::get('/auth/callback', function () {
+//     $user = Socialite::driver('google')->user();
+//     // $user->token
+// });
+ 
+
+//Calling Site controller for UI
 Route::get('/', [siteController::class, 'index']);
 Route::get('/products', [siteController::class, 'products'])->name('products');
 Route::get('/products/{id}', [siteController::class, 'productDetails']);
