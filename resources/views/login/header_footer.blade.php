@@ -133,6 +133,7 @@
     @yield('content')
 
    <!-- Footer -->
+<!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -253,6 +254,7 @@
   </div>
   <!-- Copyright -->
 </footer>
+
 <!-- Footer -->
     <script src="{{asset('zerokart/home/script.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

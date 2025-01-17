@@ -250,45 +250,179 @@
 </div>
 <div class="container-fluid my-2">
   <div class="row">
-    <!-- @for ($i=1; $i <= 6; $i++)
-      <div class="col-6 col-sm-4 col-md-2 mb-4">
-        <div class="card border">
-          <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="Card image cap">
+    <!-- Carousel Section (70%) -->
+    <div class="col-md-8">
+      <!-- Controls Header -->
+      <div class="orangeCarousel-controls mb-2 d-flex justify-content-end">
+        <button class="orangeCarousel-prev me-2" type="button" data-bs-target="#orangeCarousel" data-bs-slide="prev" style="display: none;">
+          <i class="fa fa-angle-left"></i>
+        </button>
+        <button class="orangeCarousel-next" type="button" data-bs-target="#orangeCarousel" data-bs-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </button>
+      </div>
+      
+      <div id="orangeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- First Slide -->
+          <div class="carousel-item active">
+            <div class="row">
+              
+              <div class="col-4">
+                <div class="orangeCarousel-thumb">
+                  <span class="orangeCarousel-wishlist"><i class="fa fa-heart-o"></i></span>
+                  <div class="orangeCarousel-imgbox">
+                    <img src="{{asset('img/top deals/13.jpg')}}" class="img-fluid" alt="Product">
+                  </div>
+                  <div class="orangeCarousel-content">
+                    <h4>Product Name</h4>
+                    <div class="orangeCarousel-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="orangeCarousel-price"><strike>$400.00</strike> <b>$369.00</b></p>
+                    <a href="#" class="orangeCarousel-btn">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="orangeCarousel-thumb">
+                  <span class="orangeCarousel-wishlist"><i class="fa fa-heart-o"></i></span>
+                  <div class="orangeCarousel-imgbox">
+                    <img src="{{asset('img/top deals/13.jpg')}}" class="img-fluid" alt="Product">
+                  </div>
+                  <div class="orangeCarousel-content">
+                    <h4>Product Name</h4>
+                    <div class="orangeCarousel-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="orangeCarousel-price"><strike>$400.00</strike> <b>$369.00</b></p>
+                    <a href="#" class="orangeCarousel-btn">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="orangeCarousel-thumb">
+                  <span class="orangeCarousel-wishlist"><i class="fa fa-heart-o"></i></span>
+                  <div class="orangeCarousel-imgbox">
+                    <img src="{{asset('img/top deals/13.jpg')}}" class="img-fluid" alt="Product">
+                  </div>
+                  <div class="orangeCarousel-content">
+                    <h4>Product Name</h4>
+                    <div class="orangeCarousel-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="orangeCarousel-price"><strike>$400.00</strike> <b>$369.00</b></p>
+                    <a href="#" class="orangeCarousel-btn">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Similar structure for other items -->
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-4">
+                <div class="orangeCarousel-thumb">
+                  <span class="orangeCarousel-wishlist"><i class="fa fa-heart-o"></i></span>
+                  <div class="orangeCarousel-imgbox">
+                    <img src="{{asset('img/top deals/13.jpg')}}" class="img-fluid" alt="Product">
+                  </div>
+                  <div class="orangeCarousel-content">
+                    <h4>Product Name</h4>
+                    <div class="orangeCarousel-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="orangeCarousel-price"><strike>$400.00</strike> <b>$369.00</b></p>
+                    <a href="#" class="orangeCarousel-btn">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="orangeCarousel-thumb">
+                  <span class="orangeCarousel-wishlist"><i class="fa fa-heart-o"></i></span>
+                  <div class="orangeCarousel-imgbox">
+                    <img src="{{asset('img/top deals/13.jpg')}}" class="img-fluid" alt="Product">
+                  </div>
+                  <div class="orangeCarousel-content">
+                    <h4>Product Name</h4>
+                    <div class="orangeCarousel-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="orangeCarousel-price"><strike>$400.00</strike> <b>$369.00</b></p>
+                    <a href="#" class="orangeCarousel-btn">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="orangeCarousel-thumb">
+                  <span class="orangeCarousel-wishlist"><i class="fa fa-heart-o"></i></span>
+                  <div class="orangeCarousel-imgbox">
+                    <img src="{{asset('img/top deals/13.jpg')}}" class="img-fluid" alt="Product">
+                  </div>
+                  <div class="orangeCarousel-content">
+                    <h4>Product Name</h4>
+                    <div class="orangeCarousel-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p class="orangeCarousel-price"><strike>$400.00</strike> <b>$369.00</b></p>
+                    <a href="#" class="orangeCarousel-btn">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Similar structure for other items -->
+            </div>
+          </div>
+          <!-- Additional slides with same structure -->
         </div>
       </div>
-    @endfor -->
-    <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/top deals/13.jpg')}}" alt="Card image cap">
-      </div>
     </div>
-    <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/top deals/16.jpg')}}" alt="Card image cap">
-      </div>
-    </div>
-    <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/top deals/17.jpg')}}" alt="Card image cap">
-      </div>
-    </div>
-    <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/top deals/18.jpg')}}" alt="Card image cap">
-      </div>
-    </div>
-    <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/top deals/15.jpg')}}" alt="Card image cap">
-      </div>
-    </div>
-    <div class="col-6 col-sm-4 col-md-2 mb-4">
-      <div class="card border">
-        <img class="card-img-top img-fluid" src="{{asset('img/top deals/14.jpg')}}" alt="Card image cap">
+    
+    <!-- Image Banner Section (30%) -->
+    <div class="col-md-4">
+      <div class="image-banner">
+        <img src="{{asset('img/banners/banner2.jpg')}}" class="img-fluid rounded banner-img" alt="Banner">
       </div>
     </div>
   </div>
 </div>
+
+
 <!-- Top Deals section ends -->
  <!--Add -->
  <div class="container-fluid py-5">
@@ -327,7 +461,8 @@
       </div>
       <div class="col-6 col-sm-4 col-md-2 mb-4">
         <div class="card border">
-          <img class="card-img-top img-fluid" src="{{asset('img/top deals/C.webp')}}" alt="Card image cap">
+          <img class="card-img-top img-fluid" src="{{asset('img/top deals/C.webp')}}" alt="Card imag
+          e cap">
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2 mb-4">
@@ -353,6 +488,213 @@
   </div>
 </div>
 <!-- Pic your styles section ends -->
+
+
+<!-- 12 cards -->
+
+<div class="container-fluid product-grid">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1 - New Arrivals -->
+                <div class="col-md-4">
+                    <div class="column-header">
+                        <h2>New Arrivals</h2>
+                        <p>Latest additions to our collection</p>
+                        <div class="meta-info">
+                            <span>4 products</span>
+                            <span>Updated today</span>
+                        </div>
+                    </div>
+                    <div class="partition">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">New</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 1">
+                                        <div class="price-badge">$123</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat for other products in Column 1 -->
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">New</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 2">
+                                        <div class="price-badge">$239</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">New</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 3">
+                                        <div class="price-badge">$147</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">New</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 4">
+                                        <div class="price-badge">$83</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 - Best Sellers -->
+                <div class="col-md-4">
+                    <div class="column-header">
+                        <h2>Best Sellers</h2>
+                        <p>Our most popular products</p>
+                        <div class="meta-info">
+                            <span>4 products</span>
+                            <span>Top rated</span>
+                        </div>
+                    </div>
+                    <div class="partition">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Popular</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 5">
+                                        <div class="price-badge">$106</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat for other products in Column 2 -->
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Popular</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 6">
+                                        <div class="price-badge">$58</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Popular</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 7">
+                                        <div class="price-badge">$199</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Popular</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 8">
+                                        <div class="price-badge">$76</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 - Special Offers -->
+                <div class="col-md-4">
+                    <div class="column-header">
+                        <h2>Special Offers</h2>
+                        <p>Limited time deals & discounts</p>
+                        <div class="meta-info">
+                            <span>4 products</span>
+                            <span>Ends soon</span>
+                        </div>
+                    </div>
+                    <div class="partition">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Sale</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 9">
+                                        <div class="price-badge">$84</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat for other products in Column 3 -->
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Sale</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 10">
+                                        <div class="price-badge">$102</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Sale</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 11">
+                                        <div class="price-badge">$63</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <div class="category-badge">Sale</div>
+                                        <img src="{{asset('img/top deals/13.jpg')}}" alt="Product 12">
+                                        <div class="price-badge">$41</div>
+                                        <div class="product-overlay">
+                                            <span class="quick-view">Quick View</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12 cards ends -->
+
 <!-- Top Deals on TV & Appliances starts -->
 <div class="container-fluid my-4 fashion-container">
   <div class="row">
@@ -388,6 +730,8 @@
       </div>
     </div>
 
+
+    
     <!-- Right Column: Main Banner -->
     <div class="col-md-8 col-sm-12">
       <div class="fashionadd-banner">
@@ -400,4 +744,45 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('orangeCarousel');
+  const prevButton = document.querySelector('.orangeCarousel-prev');
+  const nextButton = document.querySelector('.orangeCarousel-next');
+  let isFirstSlide = true;
+  
+  // Create Bootstrap carousel instance
+  const carouselInstance = new bootstrap.Carousel(carousel, {
+    interval: 3000,
+    wrap: true
+  });
+  
+  // Handle previous button visibility
+  carousel.addEventListener('slide.bs.carousel', function(event) {
+    if (isFirstSlide) {
+      isFirstSlide = false;
+      prevButton.style.display = 'block';
+    }
+  });
+  
+  // Handle mouse hover pause/play
+  carousel.addEventListener('mouseenter', function() {
+    carouselInstance.pause();
+  });
+  
+  carousel.addEventListener('mouseleave', function() {
+    carouselInstance.cycle();
+  });
+  
+  // Add click handlers for custom controls
+  prevButton.addEventListener('click', function() {
+    carouselInstance.prev();
+  });
+  
+  nextButton.addEventListener('click', function() {
+    carouselInstance.next();
+  });
+});
+</script>
 @endsection

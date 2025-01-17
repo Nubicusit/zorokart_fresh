@@ -86,7 +86,7 @@
 
     <footer class="text-center text-lg-start">
         <section class="footer-section">
-            <div class="container footer-container">
+            <div class="container footer-container w-100">
 
                 <div class="footer-column">
                     <h6>About</h6>
