@@ -51,11 +51,11 @@
 
 <!-- Offers and discounts heading starts -->
 <div class="container-fluid my-4">
-<h3>
+<!-- <h3>
   Avail Best Offers & Discounts
   <br>
   <small class="text-body-secondary"><a href="#">All Offers</a></small>
-</h3>
+</h3> -->
 <div class="container-fluid my-4 px-2">
   <span style="font-size: larger;font-weight: 600;">Avail Best Offers & Discounts</span>
   <span><a href="#" style="font-size: 15px !important;float:right;"><u>All Offers</u></a></span>

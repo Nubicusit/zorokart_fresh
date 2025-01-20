@@ -24,9 +24,7 @@
       </div>
     </div>
     <!-- Right Column: Offers or Categories -->
-    <!-- Right Column: Offers or Categories -->
-    <!-- Right Column: Offers or Categories -->
-    <div class="col-md-7 col-sm-12 mb-4 
+    <div class="col-md-7 col-sm-12 mb-4"> 
         <div class="sidebar">
             <h3>Product Name</h3>
             <p class="price">₹ 2170</p>

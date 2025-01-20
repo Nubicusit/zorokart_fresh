@@ -144,7 +144,7 @@
             <a href="#!">Advertise</a>
             <a href="#!">Gift Cards</a>
             <a href="#!">Help Center</a>
-            <span>© 2007-2024 this.com</span>
+            <span>©copyrights reserved Nubicus IT 2007 - 2025</span>
         </div>
     </footer>
     <script src="{{asset('zerokart/home/script.js')}}"></script>
