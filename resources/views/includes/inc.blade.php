@@ -13,7 +13,23 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 </head>
 <style>
+    @media (max-width: 991px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
     
+    .navbar-nav .nav-link.active {
+        order: 1; /* Moves 'Deliver to India' to the start */
+    }
+}
+
+.ms-sm-negative-13 {
+    margin-left: -13px;
+}
+
+
 </style>
 <body>
     <nav class="navbar navbar-light navbar-expand-lg">
@@ -27,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active text-white" aria-current="page" ><i class="p-0 bi-geo-alt"></i>&nbsp;Deliver to India</a>
-                    <div class="dropdown">
+                    <div class="dropdown ms-sm-negative-13">
                         <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">
                             all
                         </button>
@@ -36,11 +52,11 @@
                             <li><button class="dropdown-item" type="button">Category 2</button></li>
                         </ul>
                     </div>
-                    <form class="d-flex">
+                    <form class="d-none d-lg-flex">
                         <input class="form-control me-2 custom-search" type="search" aria-label="Search">
                         <button class="btn text-white" type="submit"><i class="bi bi-search"></i></button>
                     </form>
-                    <div class="dropdown">
+                    <div class="dropdown ms-sm-negative-13">
                         <button class="btn dropdown-toggle text-white" type="button" id="dropdownLang" data-bs-toggle="dropdown" aria-expanded="false">
                             lang
                         </button>
@@ -49,17 +65,17 @@
                             <li><button class="dropdown-item" type="button">Hindi</button></li>
                         </ul>
                     </div>
-                     <div class="dropdown">
+                     <div class="dropdown ms-sm-negative-13">
                         <button class="btn dropdown-toggle text-white" type="button" id="dropdownLog" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-circle-user fa-xl" style="color: #ffffff;"></i>&nbsp;Login
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownLog">
-                            <li><button class="dropdown-item" type="button">Login</button></li>
-                            <li><button class="dropdown-item" type="button">Register</button></li>
+                            <li><a href="{{ url('/login') }}"><button class="dropdown-item" type="button">Login</button></a></li>
+                            <li><a href="{{ url('/signup') }}"><button class="dropdown-item" type="button">Register</button></a></li>
                         </ul>
                     </div>
                     <a class="nav-link  text-white" aria-current="page" href="#"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #ffffff;"></i>&nbsp;Cart</a>
-                    &nbsp;
+                   
                     <a class="nav-link  text-white" aria-current="page" href="#"><i class="fa-solid fa-shop fa-xl" style="color: #ffffff;"></i>&nbsp; Become a Seller</a>
                 </div>
             <div>
@@ -70,7 +86,7 @@
 
     <footer class="text-center text-lg-start">
         <section class="footer-section">
-            <div class="container footer-container">
+            <div class="container footer-container w-100">
 
                 <div class="footer-column">
                     <h6>About</h6>

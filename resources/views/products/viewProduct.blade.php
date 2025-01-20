@@ -1,10 +1,20 @@
 @extends('includes.inc')
 @section('content')
+
 <!-- Product view starts -->
 <div class="container my-4 fashion-container">
   <div class="row">
     <!-- Left Column: Main Banner -->
-    <div class="col-md-5 col-sm-12">
+    <div class="col">
+      <div class="more-images">
+        @for ($i=1; $i <= 6; $i++)
+          <div class="card border">
+            <img class="card-img-top img-fluid more-images-each" src="https://via.placeholder.com/100" alt="More Images">
+          </div>
+        @endfor
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
       <div class="fashionadd-banner">
         <img class="fashionadd-banner-img img-fluid" src="https://via.placeholder.com/400x500" alt="Fashion">
         <div class="fashionadd-banner-text">
@@ -12,36 +22,34 @@
           <p>Latest Collection, Best Brands</p>
         </div>
       </div>
-      <div class="more-images">
-        @for ($i=1; $i <= 6; $i++)
-          <div class="card border">
-            <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="More Images">
-          </div>
-        @endfor
-      </div>
     </div>
     <!-- Right Column: Offers or Categories -->
-    <div class="col-md-7 col-sm-12 mb-4">
+    <!-- Right Column: Offers or Categories -->
+    <!-- Right Column: Offers or Categories -->
+    <div class="col-md-7 col-sm-12 mb-4 
         <div class="sidebar">
             <h3>Product Name</h3>
-            <p>Price</p>
+            <p class="price">₹ 2170</p>
             <div>
-                <h5>Offers available</h5>
+                <p>Offers available</p>
                 <div class="row justify-content-center">
                     <!-- Row 1 -->
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                        <!-- <img src="https://via.placeholder.com/150" alt="Offer 1" class="img-fluid"> -->
+                          <b>No Cost EMI </b>
+                          <p class="offer-desc">Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI</p>
                         </div>
                     </div>
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                        <!-- <img src="https://via.placeholder.com/150" alt="Offer 2" class="img-fluid"> -->
+                          <b>No Cost EMI </b>
+                          <p class="offer-desc">Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI</p>
                         </div>
                     </div>
                     <div class="col-4 mb-3 d-flex justify-content-center">
                         <div class="offer-item">
-                        <!-- <img src="https://via.placeholder.com/150" alt="Offer 3" class="img-fluid"> -->
+                          <b>No Cost EMI </b>
+                          <p class="offer-desc">Upto ₹202.22 EMI interest savings on Amazon Pay ICICI Bank Credit CardsUpto ₹202.22 EMI interest savings on Amazon Pay ICICI</p>
                         </div>
                     </div>
                 </div>
@@ -60,9 +68,9 @@
             </div>
         </div>
         
-        <div style="margin-top: 75px;">
-            <button type="button" class="btn btn-primary mybutton">Buy Now</button>
-            <button type="button" class="btn btn-primary mybutton">Add to Cart</button>
+        <div class="button-row">
+            <button type="button" class="btn btn-primary row mybutton">Buy Now</button>
+            <button type="button" class="btn btn-primary row mybutton">Add to Cart</button>
         </div>
     </div>
   </div>
