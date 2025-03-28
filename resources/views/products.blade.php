@@ -1,273 +1,620 @@
 @extends('includes.inc')
 @section('content')
+    <style>
+    .product-list-container {
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
 
-<div class="container w-100">
-	<div class="row">
-	<aside class="col-md-3">
-		
-<div class="card">
-	<article class="filter-group">
-		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
-				<i class="icon-control fa fa-chevron-down"></i>
-				<h6 class="title">Product type</h6>
-			</a>
-		</header>
-		<div class="filter-content collapse show" id="collapse_1" style="">
-			<div class="card-body">
-				<form class="pb-3">
-				<div class="input-group">
-				  <input type="text" class="form-control" placeholder="Search">
-				  <div class="input-group-append">
-				    <button class="btn btn-light" type="button"><i class="fa fa-search"></i></button>
-				  </div>
-				</div>
-				</form>
-				
-				<ul class="list-menu">
-				<li><a href="#">People  </a></li>
-				<li><a href="#">Watches </a></li>
-				<li><a href="#">Cinema  </a></li>
-				<li><a href="#">Clothes  </a></li>
-				<li><a href="#">Home items </a></li>
-				<li><a href="#">Animals</a></li>
-				<li><a href="#">People </a></li>
-				</ul>
+    .filter-sidebar {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-			</div> <!-- card-body.// -->
-		</div>
-	</article> <!-- filter-group  .// -->
-	<article class="filter-group">
-		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
-				<i class="icon-control fa fa-chevron-down"></i>
-				<h6 class="title">Brands </h6>
-			</a>
-		</header>
-		<div class="filter-content collapse show" id="collapse_2" style="">
-			<div class="card-body">
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Mercedes  
-				  	<b class="badge badge-pill badge-light float-right">120</b>  </div>
-				</label>
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Toyota 
-				  	<b class="badge badge-pill badge-light float-right">15</b>  </div>
-				</label>
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Mitsubishi 
-				  	<b class="badge badge-pill badge-light float-right">35</b> </div>
-				</label>
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Nissan 
-				  	<b class="badge badge-pill badge-light float-right">89</b> </div>
-				</label>
-				<label class="custom-control custom-checkbox">
-				  <input type="checkbox" class="custom-control-input">
-				  <div class="custom-control-label">Honda 
-				  	<b class="badge badge-pill badge-light float-right">30</b>  </div>
-				</label>
-	</div> <!-- card-body.// -->
-		</div>
-	</article> <!-- filter-group .// -->
-	<article class="filter-group">
-		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
-				<i class="icon-control fa fa-chevron-down"></i>
-				<h6 class="title">Price range </h6>
-			</a>
-		</header>
-		<div class="filter-content collapse show" id="collapse_3" style="">
-			<div class="card-body">
-				<input type="range" class="custom-range" min="0" max="100" name="">
-				<div class="form-row">
-				<div class="form-group col-md-6">
-				  <label>Min</label>
-				  <input class="form-control" placeholder="$0" type="number">
-				</div>
-				<div class="form-group text-right col-md-6">
-				  <label>Max</label>
-				  <input class="form-control" placeholder="$1,0000" type="number">
-				</div>
-				</div> <!-- form-row.// -->
-				<button class="btn btn-block btn-primary">Apply</button>
-			</div><!-- card-body.// -->
-		</div>
-	</article> <!-- filter-group .// -->
-	<article class="filter-group">
-		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
-				<i class="icon-control fa fa-chevron-down"></i>
-				<h6 class="title">Sizes </h6>
-			</a>
-		</header>
-		<div class="filter-content collapse show" id="collapse_4" style="">
-			<div class="card-body">
-			  <label class="checkbox-btn">
-			    <input type="checkbox">
-			    <span class="btn btn-light"> XS </span>
-			  </label>
+    .filter-group {
+        margin-bottom: 1.5rem;
+    }
 
-			  <label class="checkbox-btn">
-			    <input type="checkbox">
-			    <span class="btn btn-light"> SM </span>
-			  </label>
+    .filter-title {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #ff5b00;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
 
-			  <label class="checkbox-btn">
-			    <input type="checkbox">
-			    <span class="btn btn-light"> LG </span>
-			  </label>
+    .filter-content {
+        display: none;
+        padding: 0.5rem 0;
+    }
 
-			  <label class="checkbox-btn">
-			    <input type="checkbox">
-			    <span class="btn btn-light"> XXL </span>
-			  </label>
-		</div><!-- card-body.// -->
-		</div>
-	</article> <!-- filter-group .// -->
-	<article class="filter-group">
-		<header class="card-header">
-			<a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
-				<i class="icon-control fa fa-chevron-down"></i>
-				<h6 class="title">More filter </h6>
-			</a>
-		</header>
-		<div class="filter-content collapse in" id="collapse_5" style="">
-			<div class="card-body">
-				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" checked="" class="custom-control-input">
-				  <div class="custom-control-label">Any condition</div>
-				</label>
+    .filter-content.show {
+        display: block;
+    }
 
-				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input">
-				  <div class="custom-control-label">Brand new </div>
-				</label>
+    .form-check-label {
+            cursor: pointer;
+            color: #333;
+        }
 
-				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input">
-				  <div class="custom-control-label">Used items</div>
-				</label>
+        .form-check-input:checked {
+            background-color: #ff5b00;
+            border-color: #ff5b00;
+        }
 
-				<label class="custom-control custom-radio">
-				  <input type="radio" name="myfilter_radio" class="custom-control-input">
-				  <div class="custom-control-label">Very old</div>
-				</label>
-			</div><!-- card-body.// -->
-		</div>
-	</article> <!-- filter-group .// -->
-</div> <!-- card.// -->
+        .product-card {
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background: white;
+        }
 
-	</aside>
-	<main class="col-md-9">
+        .product-img {
+            position: relative;
+            padding-top: 100%;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+        }
 
-<header class="border-bottom mb-4 pb-3">
-		<div class="form-inline">
-			<span class="mr-md-auto">32 Items found </span>
-			<select class="mr-2 form-control">
-				<option>Latest items</option>
-				<option>Trending</option>
-				<option>Most Popular</option>
-				<option>Cheapest</option>
-			</select>
-			<div class="btn-group">
-				<a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="" data-original-title="List view"> 
-					<i class="fa fa-bars"></i></a>
-				<a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="" data-original-title="Grid view"> 
-					<i class="fa fa-th"></i></a>
-			</div>
-		</div>
-</header><!-- sect-heading -->
+        .product-img img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-<div class="row">
-	<!-- Top Deals section starts -->
-<div class="container my-4">
-<h3>
-  Products
-  <br>
-  <!-- <small class="text-body-secondary"><a href="#">All Offers</a></small> -->
-</h3>
-</div>
-<div class="container my-2">
-  <div class="row">
-    @for ($i=1; $i <= 24; $i++)
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div class="card border rounded-3">
-          <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><a href="http://127.0.0.1:8000/products/s" style="color: black;">Product Name</a></h5>
-            <div class="d-flex justify-content-between">
-              <!-- Buy Now Button with Icon -->
-              <button class="btn">
-                <i class="bi bi-cart-fill" style="color:#ff5B00; font-size: 2rem;"></i>
-              </button>
-              <!-- Add to Cart Button with Icon -->
-              <button class="btn">
-                <i class="bi bi-heart" style="color:#ff5B00; font-size: 2rem;"></i>
-              </button>
+        .wishlist-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .btn-wishlist {
+            outline: none;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff5b00;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .product-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .product-price {
+            color: #ff5b00;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .original-price {
+            color: #6c757d;
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .mobile-filters {
+            display: none;
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-quick-filters {
+            padding: 10px 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .quick-filter-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 10px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            color: #495057;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .quick-filter-btn.active {
+            background: #ff5b00;
+            color: white;
+            border-color: #ff5b00;
+        }
+
+        .form-select {
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .form-select:focus {
+            border-color: #ff5b00;
+            box-shadow: 0 0 0 0.2rem rgba(255, 91, 0, 0.25);
+        }
+
+        @media (max-width: 991px) {
+            .mobile-filters {
+                display: block;
+            }
+
+            .mobile-quick-filters {
+                display: block;
+            }
+
+            .filter-sidebar {
+                display: none;
+            }
+
+            .product-list-container {
+                padding-top: 1rem;
+            }
+        }
+    </style>
+
+    <div class="container-fluid product-list-container py-4">
+        <!-- Mobile Filters -->
+        <div class="mobile-filters">
+            <div class="row g-2">
+                <div class="col-6">
+                    <select class="form-select">
+                        <option selected>Filter by Price</option>
+                        <option>Under ₹500</option>
+                        <option>₹500 - ₹1000</option>
+                        <option>₹1000 - ₹2000</option>
+                        <option>Over ₹2000</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <select class="form-select">
+                        <option selected>Sort by</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                        <option>Popular</option>
+                    </select>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    @endfor
-  </div>
-</div>
 
-</div>
-<!-- Top Deals section ends -->
-</div> <!-- row end.// -->
+        <!-- Mobile Quick Filters -->
+        <div class="mobile-quick-filters">
+            <a href="#" class="quick-filter-btn active">Top Rated</a>
+            <a href="#" class="quick-filter-btn">Best Sellers</a>
+            <a href="#" class="quick-filter-btn">New Arrivals</a>
+            <a href="#" class="quick-filter-btn">On Sale</a>
+            <a href="#" class="quick-filter-btn">Featured</a>
+        </div>
 
-
-<nav class="mt-4" aria-label="Page navigation sample">
-  <ul class="pagination">
-    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
-
-	</main>
-	</div>
-</div>
-<!-- Top Deals section starts -->
-<div class="container my-4">
-<h3>
-  Products
-  <br>
-  <!-- <small class="text-body-secondary"><a href="#">All Offers</a></small> -->
-</h3>
-</div>
-<div class="container my-2">
-  <div class="row">
-    @for ($i=1; $i <= 24; $i++)
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-        <div class="card border rounded-3">
-          <img class="card-img-top img-fluid" src="https://via.placeholder.com/100" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"><a href="http://127.0.0.1:8000/products/s" style="color: black;">Product Name</a></h5>
-            <div class="d-flex justify-content-between">
-              <!-- Buy Now Button with Icon -->
-              <button class="btn">
-                <i class="bi bi-cart-fill" style="color:#ff5B00; font-size: 2rem;"></i>
-              </button>
-              <!-- Add to Cart Button with Icon -->
-              <button class="btn">
-                <i class="bi bi-heart" style="color:#ff5B00; font-size: 2rem;"></i>
-              </button>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0">All Products</h4>
+            <div class="d-flex gap-3 align-items-center">
+                <select class="form-select" style="width: auto;">
+                    <option>Sort by: Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Newest First</option>
+                </select>
             </div>
-          </div>
         </div>
-      </div>
-    @endfor
-  </div>
-</div>
 
-</div>
-<!-- Top Deals section ends -->
+        <div class="row">
+            <!-- Filter Sidebar -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="filter-sidebar">
+                    <div class="filter-group">
+                        <div class="filter-title" onclick="toggleFilter(this)">
+                            Price Range
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-content">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="price1">
+                                <label class="form-check-label" for="price1">Under ₹500</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="price2">
+                                <label class="form-check-label" for="price2">₹500 - ₹1000</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="price3">
+                                <label class="form-check-label" for="price3">₹1000 - ₹2000</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="price4">
+                                <label class="form-check-label" for="price4">Over ₹2000</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title" onclick="toggleFilter(this)">
+                            Categories
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-content">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat1">
+                                <label class="form-check-label" for="cat1">Electronics</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat2">
+                                <label class="form-check-label" for="cat2">Fashion</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="cat3">
+                                <label class="form-check-label" for="cat3">Home & Living</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="cat4">
+                                <label class="form-check-label" for="cat4">Books</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="filter-title" onclick="toggleFilter(this)">
+                            Brand
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="filter-content">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="brand1">
+                                <label class="form-check-label" for="brand1">Apple</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="brand2">
+                                <label class="form-check-label" for="brand2">Samsung</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="brand3">
+                                <label class="form-check-label" for="brand3">Sony</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="brand4">
+                                <label class="form-check-label" for="brand4">Nike</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-lg-9">
+                <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-4">
+                    <!-- Product Card (repeat this for each product) -->
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-4">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="{{asset('img/top deals/H.webp')}}" alt="product">
+                                <button class="wishlist-btn btn-wishlist">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="product-badge">20% OFF</span>
+                            </div>
+                            <div class="product-info">
+                                <h5 class="product-title">Wireless Bluetooth Headphones</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="ms-2 text-muted">(24)</span>
+                                </div>
+                                <div>
+                                    <span class="product-price">$79.99</span>
+                                    <span class="original-price">$99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat product cards as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle filter content
+        function toggleFilter(element) {
+            const content = element.nextElementSibling;
+            element.classList.toggle('collapsed');
+            content.classList.toggle('show');
+        }
+
+        // Mobile quick filter buttons
+        document.querySelectorAll('.quick-filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.quick-filter-btn').forEach(b =>
+                    b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Wishlist button toggle
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                icon.classList.toggle('far');
+                icon.classList.toggle('fas');
+                icon.classList.toggle('text-danger');
+            });
+        });
+    </script>
 @endsection

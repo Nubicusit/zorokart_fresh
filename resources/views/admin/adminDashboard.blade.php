@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    @include('admin.styles')
-</head>
-<body>
-    @include('admin.sidebar')
-
+@extends('admin.inc.includes')
+@section('content')
     <div class="main-content">
         <div class="header-section d-flex justify-content-between align-items-center">
             <h2 class="mb-0">Welcome Admin</h2>
             <div class="user-section">
                 <i class="fas fa-bell"></i>
-                <i class="fas fa-cog"></i>
-                <div class="user-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
+                <!-- <div class="user-avatar"> -->
+                
+                <!-- </div> -->
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        <i class="fa fa-sign-out"></i>
+                    </x-responsive-nav-link>
+                </form>
                 <div>
                     <strong>Admin</strong>
                     <div class="text-muted small">Administrator</div>
@@ -126,8 +123,4 @@
         </div>
     </div>
     <!-- end -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    @include('admin.scripts')
-</body>
-</html>
+@endsection

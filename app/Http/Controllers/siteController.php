@@ -13,14 +13,47 @@ class siteController extends Controller
         return view('index');
     }
 
+
+
+
     //Calling all products
     public function products(){
         return view('products');
     }
-
     //Show Product details
     public function productDetails(){
         return view('products.viewProduct');
+    }
+    
+    public function productCart()
+    {
+        return view('products.cart');
+    }
+
+    public function productWishlist()
+    {
+        return view('products.wishlist');
+    }
+
+    public function profile()
+    {
+        return view('products.profile');
+    }
+    
+     public function orders()
+    {
+        return view('products.orders');
+    }
+    
+     public function coupon()
+    {
+        return view('products.coupon');
+    }
+
+    //view category
+    public function cat()
+    {
+        return view('products.category');
     }
 
     public function login(){
