@@ -20,4 +20,18 @@ class siteController extends Controller
     public function productDetails(){
         return view('products.viewProduct');
     }
+
+    public function login(){
+        return view('login.login');
+    }
+
+    public function signup(){
+        return view('signup.signup');
+    }
+
+    public function admin(){
+        return view('admin.adminDashboard');
+    }
+
+
 }

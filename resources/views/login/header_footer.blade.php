@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZoroKart Home Page</title>
     <script src="https://kit.fontawesome.com/29d1847fa7.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 </head>
 <style>
@@ -21,7 +19,7 @@
     }
     
     .navbar-nav .nav-link.active {
-        order: 1; /* Moves 'Deliver to India' to the start */
+        order: 1; 
     }
 }
 
@@ -29,7 +27,7 @@
 <body>
     <nav class="navbar navbar-light navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="#">
                 <img src="{{asset('img/logo-01.svg')}}" alt="" width="120" height="50" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +41,7 @@
                             all
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <li><button class="dropdown-item" type="button"  onclick="window.location='{{ route('products') }}';">Category 2</button></li>
+                            <li><button class="dropdown-item" type="button">Category 1</button></li>
                             <li><button class="dropdown-item" type="button">Category 2</button></li>
                         </ul>
                     </div>
