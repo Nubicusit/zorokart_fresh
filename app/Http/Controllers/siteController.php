@@ -56,6 +56,40 @@ class siteController extends Controller
         return view('products.category');
     }
 
+    //privacy policy
+    public function privacyPolicy()
+    {
+        return view('policy.privacy-policy');
+    }
+
+    //terms and conditions
+    public function termsAndConditions()
+    {
+        return view('policy.terms-and-conditions');
+    }
+
+    //shpping delivery
+    public function shippingDelivery()
+    {
+        return view('policy.shipping-delivery');
+    }
+    //cancellation policy
+    public function cancellationRefund()
+    {
+        return view('policy.cancellation-refund');
+    }
+    //about us
+    public function aboutUs()
+    {
+        return view('about');
+    }
+
+    //contact us
+    public function contactUs()
+    {
+        return view('contact');
+    }
+    
     public function login(){
         return view('login.login');
     }

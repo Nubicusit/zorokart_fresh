@@ -36,6 +36,17 @@ Route::get('/profilee', [siteController::class, 'profile'])->name('products.prof
 Route::get('/order',[siteController::class,'orders'])->name('products.orders');
 Route::get('/coupon', [siteController::class, 'coupon'])->name('products.coupon');
 
+//==================================Policy=============================================//
+Route::get('/privacy-policy', [siteController::class, 'privacyPolicy'])->name('privacy.policy');
+Route::get('/terms-and-conditions', [siteController::class, 'termsAndConditions'])->name('terms.conditions');
+Route::get('/shipping-delivery',[siteController::class,'shippingDelivery'])->name('privacy.shippingDelivery');
+Route::get('/cancellation-refund',[siteController::class,'cancellationRefund'])->name('privacy.cancellationRefund');
+
+//==================================About=============================================//
+Route::get('/about-us', [siteController::class, 'aboutUs'])->name('aboutus');
+
+//==================================Contact Us=============================================//
+Route::get('/contact-us', [siteController::class, 'contactUs'])->name('contactus');
 
 Route::get('admin/dashboard',[HomeController::class,'adminIndex'])->middleware(['auth','admin'])->name('admin.dashboard');
 Route::get('user/dashboard',[HomeController::class,'userIndex'])->middleware(['auth','user']);

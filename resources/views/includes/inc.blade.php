@@ -18,18 +18,18 @@
 </head>
 <style>
     /* navbar starts */
-    
-    .mob-img{
+
+    .mob-img {
         width: 155px;
     }
 
-    .bi-x-lg::before{
+    .bi-x-lg::before {
         content: "\f659";
-    color: #ff5b00;
-    outline: none;
-    border: none;
+        color: #ff5b00;
+        outline: none;
+        border: none;
     }
-    
+
 
     .sidebar-menu {
         position: fixed;
@@ -64,32 +64,32 @@
         display: block;
     }
 
-  .navbar-toggler-icon {
-    background-image: none !important; 
-    width: 30px; 
-    height: 3px; 
-    background-color: #ff5b00; 
-    display: block;
-    position: relative;
-}
+    .navbar-toggler-icon {
+        background-image: none !important;
+        width: 30px;
+        height: 3px;
+        background-color: #ff5b00;
+        display: block;
+        position: relative;
+    }
 
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: "";
-    width: 30px;
-    height: 3px;
-    background-color: #ff5b00;
-    position: absolute;
-    left: 0;
-}
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #ff5b00;
+        position: absolute;
+        left: 0;
+    }
 
-.navbar-toggler-icon::before {
-    top: -8px; 
-}
+    .navbar-toggler-icon::before {
+        top: -8px;
+    }
 
-.navbar-toggler-icon::after {
-    top: 8px; 
-}
+    .navbar-toggler-icon::after {
+        top: 8px;
+    }
 
 
 
@@ -117,7 +117,7 @@
     .nav-link:hover {
         background-color: #ff5b00;
         color: black;
-  
+
     }
 
     .nav-link i {
@@ -205,65 +205,65 @@
             width="50" />
     </a>
     <div class="navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Pincode
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="/products" role="button">
-                        Products
-                    </a>
-                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Pincode
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/products" role="button">
+                    Products
+                </a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                     </div> -->
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input  class="form-control mr-sm-2" placeholder="Search" />
-            </form>
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button">
-                        Lang
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="langDropdown">
-                        <a class="dropdown-item" href="#">English</a>
-                        <a class="dropdown-item" href="#">Hindi</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button">
-                        <i class="fas fa-user-circle"></i>
-                        Login
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
-                        <a class="dropdown-item" href="{{ route('login') }}">Sign In</a>
-                        <a class="dropdown-item" href="{{ route('register') }}">Register</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('products.cart') }}">
-                        <i class="fas fa-shopping-cart"></i>
-                        Cart
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register-vendor') }}">
-                        <i class="fas fa-store"></i>
-                        Become a Seller
-                    </a>
-                </li>
-            </ul>
-        </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" placeholder="Search" />
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button">
+                    Lang
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langDropdown">
+                    <a class="dropdown-item" href="#">English</a>
+                    <a class="dropdown-item" href="#">Hindi</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button">
+                    <i class="fas fa-user-circle"></i>
+                    Login
+                </a>
+                <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                    <a class="dropdown-item" href="{{ route('login') }}">Sign In</a>
+                    <a class="dropdown-item" href="{{ route('register') }}">Register</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('products.cart') }}">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('register-vendor') }}">
+                    <i class="fas fa-store"></i>
+                    Become a Seller
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 
 <!-- Mobile Navbar -->
-<nav class="navbar d-lg-none mob-navbar p-1"> 
+<nav class="navbar d-lg-none mob-navbar p-1">
     <div class="container-fluid align-items-center p-0">
         <!-- Logo -->
         <a class="navbar-brand p-0" href="/"> <!-- Added p-0 -->
@@ -390,8 +390,8 @@
             <!-- Column 1: Description -->
             <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
                 <p class="footer-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat
-                    voluptatibus placeat nam, commodi optio pariatur est quia magnam.
+                    ZoroKart is your trusted online shopping destination, offering a wide range of products at
+                    unbeatable prices. Shop with confidence and enjoy fast delivery and excellent customer service.
                 </p>
             </div>
 
@@ -404,16 +404,16 @@
                             <a href="{{ route('products.cart') }}">Cart</a>
                             <a href="{{ route('products.wishlist') }}">Wishlist</a>
                             <a href="{{ route('products.orders') }}">Orders</a>
-                            <a href="#">FAQ</a>
+                            <a href="{{ route('contactus') }}">Contact Us</a>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="link-column">
                             <h5>Resources</h5>
-                            <a href="#">Blog</a>
-                            <a href="#">Documentation</a>
-                            <a href="#">Support</a>
-                            <a href="#">Privacy Policy</a>
+                            <a href="{{ route('privacy.policy') }}">Privacy Policy</a>
+                            <a href="{{ route('terms.conditions') }}">Terms and Conditions</a>
+                            <a href="{{ route('privacy.cancellationRefund') }}">Cancellation and Refund</a>
+                            <a href="{{ route('privacy.shippingDelivery') }}">Shipping and Delivery</a>
                         </div>
                     </div>
                 </div>
@@ -435,7 +435,7 @@
         <!-- Copyright and Payment Icons -->
         <div class="row footer-bottom align-items-center mt-4">
             <div class="col-12 col-md-6 copyright">
-                <p>© copyright all right reserved 2025 ZoroKart Designed and Developed by Nubicus</p>
+                <p>© 2025 ZoroKart. All rights reserved. Designed and Developed by Nubicus.</p>
             </div>
             <div class="col-12 col-md-6">
                 <div class="payment-icons">
